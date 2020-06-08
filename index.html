@@ -1,6 +1,11 @@
 ---
 layout: home
-title: Freedom Project
+title: Biochemistry
+subtitle1: DNA
+subtitle2: Nutrient
+subtitle3: Enzymes and Energy
+author: Alan Po
+show_heading: true
 ---
 <!DOCTYPE html>
 <html>
@@ -15,6 +20,9 @@ title: Freedom Project
     <link href="main.css" rel="stylesheet">
   </head>
   <body>
+  {% if page.show_heading %}
+    <h1>{{ page.author | upcase }}</h1>
+  {% endif %}
   <nav class="navbar navbar-expand-lg navbar-light">
         <a class="navbar-brand nav-title" href="#">Freedom~</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,18 +48,18 @@ title: Freedom Project
       </nav>
       <img src="biochemistry.jpeg">
         <div id="home">
-          <h1 class="title">Biochemistry</h1>
+          <h1 class="title">{{ page.title }}</h1>
           <p>Biochemistry is the study of the structure, composition, and chemical reactions of substances in living systems. Biochemistry emerged as a separate discipline when scientists combined biology with organic, inorganic, and physical chemistry and began to study how living things obtain energy from food, the chemical basis of heredity, and what fundamental changes occur in disease, and related issues. Biochemistry includes the sciences of molecular biology, immunochemistry, and neurochemistry, as well as bioinorganic, bioorganic, and biophysical chemistry.</p>
         </div>
 
         <div id="IntroDNA">
-          <h1 class="heading">Introduction of DNA</h1>
+          <h1 class="heading">{{ page.subtitle1 }}</h1>
           <p>DNA(deoxyribonucleic acid) is the hereditary material in humans and almost all other organisms.Nearly every cell in a person’s body has the same DNA. Most DNA is located in the cell nucleus. The information in DNA is stored as a code made up of four chemical bases: adenine (A), guanine (G), cytosine (C), and thymine (T). Human DNA consists of about 3 billion bases, and more than 99 percent of those bases are the same in all people. The order, or sequence, of these bases determines the information available for building and maintaining an organism. DNA bases pair up with each other, A with T and C with G, to form units called base pairs. Each base is also attached to a sugar molecule and a phosphate molecule.</p>
           <img src="DNA.jpg">
         </div>
 
         <div id="IntroNut">
-          <h1 class="heading">Introduction of Nutrient</h1>
+          <h1 class="heading">{{ page.subtitle2 }}</h1>
           <div class="row">
           <div class="card" style="width: 18rem;">
             <div class="card-body">
@@ -76,7 +84,7 @@ title: Freedom Project
         </div>
 
         <div id="ENE">
-          <h1 class="heading">Enzymes and Energy</h1>
+          <h1 class="heading">{{ page.subtitle3 }}</h1>
           <p>How our bodies turn food into energy: Our bodies digest the food we eat by mixing it with fluids (acids and enzymes) in the stomach. When the stomach digests food, carbohydrates (sugars and starches) in the food breaks down into another type of sugar, called glucose. The stomach and small intestines absorb the glucose and then release it into the bloodstream. Once in the bloodstream, glucose can be used immediately for energy or stored in our bodies, to be used later.</p>
         </div>
         <img src="enzymes.jpg">
